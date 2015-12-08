@@ -13,6 +13,14 @@
                 text-align: right;
             }
         </style>
+	function setHidden(){
+		var index = document.getElementsByName('team')[0].selectedIndex;
+		var options = document.getElementsByTagName('option');
+		console.log(options[index]);
+
+	}
+	<script>
+	</script>
     </head>
     <body>
         <form action="/yhcms/index.php/Home/Houses/add" method="post">
@@ -22,7 +30,7 @@
             </div>
             <div class="data_line">
                 <span class="desc">所属区队</span>
-                <select name="team">
+                <select name="team"> 
                     <option value="1">云汉一队</option>
                     <option value="2">云汉二队</option>
                     <option value="东3">云汉东三队</option>
@@ -37,7 +45,9 @@
                     <option value="11">云汉十一队</option>
                     <option value="12">云汉十二队</option>
                     <option value="13">云汉十三队</option>
+                    <option value="14">非云汉户籍</option>
                 </select>
+		<input type="hidden" name="team_c" />
             </div>
             <div class="data_line">
                 <span class="desc">户口册号</span>
@@ -51,6 +61,7 @@
                 <span class="desc">地址</span>
                 <input type="text" name="address" value="" />
             </div>
+	    <input type="button" onclick="setHidden()" value="setHidden" />
             <button type="submit">提交</button>
         </form>
     </body>

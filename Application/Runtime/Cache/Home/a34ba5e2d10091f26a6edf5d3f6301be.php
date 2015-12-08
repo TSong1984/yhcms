@@ -19,15 +19,14 @@
                 <td>电话</td>
                 <td>地址</td>
             </tr>
-                <tr>
             <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                    <td><?php echo ($i); ?><td>
-                    <td><?php echo ($vo["house_id"]); ?><td>
-                    <td><?php echo ($vo["team"]); ?>-<?php echo ($vo["team_id"]); ?><td>
-                    <td><?php echo ($vo["team"]); ?><td>
-                    <td><?php echo ($vo["phone"]); ?><td>
-                    <td><?php echo ($vo["address"]); ?><td><?php endforeach; endif; else: echo "" ;endif; ?>
-                </tr>a
+                    <td><?php echo ($i); ?></td>
+                    <td><?php echo ($vo["house_id"]); ?></td>
+                    <td><?php echo ($vo["team"]); ?>-<?php echo ($vo["team_id"]); ?></td>
+                    <td><?php echo ($vo["team_c"]); ?>队</td>
+                    <td><?php echo ($vo["phone"]); ?></td>
+                    <td><?php echo ($vo["address"]); ?></td>
+	    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
         </table>
     </body>
 </html>
